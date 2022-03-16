@@ -1,0 +1,7 @@
+﻿@using DemoWebBanVali.Models
+@model List<tLoaiSP>
+
+@foreach (var item in Model)
+{
+    <a href="@Url.Action("SanPhamTheoLoai", "SanPham", new {@MaLoai = item.MaLoai})" onclick="w3_close()" class="w3-bar-item w3-button">@item.Loai</a>
+}
