@@ -1,0 +1,41 @@
+﻿@using DemoWebBanVali.Models
+@model List<GioHang>
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_LayoutSP.cshtml";
+}
+
+<h2>GioHang</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Mã sản phẩm</td>
+            <td>Tên sản phẩm</td>
+            <td>Hình ảnh</td>
+            <td>Số lượng</td>
+            <td>Đơn giá</td>
+            <td>Thành tiền</td>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.sMaSP</td>
+            <td>@item.sTenSP</td>
+            <td><img src="@Url.Content("~/images/Product/" + item.sHinhAnh)" alt="" width="60" height="60"></td>
+            <td>@item.iSoLuong</td>
+            <td>@item.dDonGia</td>
+            <td>@item.dThanhTien</td>
+        </tr>
+    }
+    <tfoot>
+        <tr>
+            <td></td>
+            <td>Tổng</td>
+            <td></td>
+            <td>@ViewBag.TongSoLuong</td>
+            <td></td>
+            <td>@ViewBag.TongTien</td>
+        </tr>
+    </tfoot>
+</table>

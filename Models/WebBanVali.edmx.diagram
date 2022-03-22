@@ -22,6 +22,7 @@
         <AssociationConnector Association="WebBanVaLiModel.FK_tDanhMucSP_tLoaiSP" ManuallyRouted="false" />
         <AssociationConnector Association="WebBanVaLiModel.FK_tDanhMucSP_tQuocGia" ManuallyRouted="false" />
         <AssociationConnector Association="WebBanVaLiModel.FK_tHangSX_tQuocGia" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="WebBanVaLiModel.tKhachHang" Width="1.5" PointX="7.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

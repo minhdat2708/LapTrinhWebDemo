@@ -135,11 +135,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\Metadatas\tDanhMucSP.Metadata.cs" />
     <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>WebBanVali.tt</DependentUpon>
@@ -154,6 +158,9 @@
       <DependentUpon>WebBanVali.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tHangSX.cs">
+      <DependentUpon>WebBanVali.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tKhachHang.cs">
       <DependentUpon>WebBanVali.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tKichThuoc.cs">
@@ -1525,6 +1532,7 @@
     <Content Include="Models\WebBanVali.edmx.diagram">
       <DependentUpon>WebBanVali.edmx</DependentUpon>
     </Content>
+    <Compile Include="Models\Metadatas\tKhachHang.Metadata.cs" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1558,6 +1566,12 @@
     <Content Include="Views\SanPham\ThemSanPham.cshtml" />
     <Content Include="Views\SanPham\SuaSanPham.cshtml" />
     <Content Include="Views\SanPham\XoaSanPham.cshtml" />
+    <Content Include="Views\TimKiem\SearchResults.cshtml" />
+    <Content Include="Views\NguoiDung\DangKy.cshtml" />
+    <Content Include="Views\NguoiDung\DangNhap.cshtml" />
+    <Content Include="Views\GioHang\GioHang.cshtml" />
+    <Content Include="Views\GioHang\GioHangPartial.cshtml" />
+    <Content Include="Views\GioHang\CapNhatGioHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

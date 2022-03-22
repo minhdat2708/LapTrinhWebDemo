@@ -34,5 +34,6 @@ namespace DemoWebBanVali.Models
         public virtual DbSet<tLoaiDT> tLoaiDTs { get; set; }
         public virtual DbSet<tLoaiSP> tLoaiSPs { get; set; }
         public virtual DbSet<tQuocGia> tQuocGias { get; set; }
+        public virtual DbSet<tKhachHang> tKhachHangs { get; set; }
     }
 }

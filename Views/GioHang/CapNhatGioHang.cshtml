@@ -1,0 +1,55 @@
+﻿@using DemoWebBanVali.Models
+@model List<GioHang>
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_LayoutSP.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Mã sản phẩm</td>
+                <td>Tên sản phẩm</td>
+                <td></td>
+                <td>Số lượng</td>
+                <td>Đơn giá</td>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.sMaSP</td>
+                <td>@item.sTenSP</td>
+                <td><img src="@Url.Content("~/images/Product/" + item.sHinhAnh)" alt="" width="60" height="60"></td>
+
+                @using (Html.BeginForm("CapNhatSoLuong", "GioHang", new { MaSP = item.sMaSP }))
+                {
+                    <td>
+                        @Html.TextBox("txtSoLuong", item.iSoLuong) 
+                        <button type="submit" class="btn btn-primary" style="padding-left: 5px">Cập nhật</button>
+                        <a href="@Url.Action("XoaGioHang", "GioHang", new { sMaSP = item.sMaSP })" class="btn btn-primary" style="padding-left: 5px">
+                            Xoá
+                        </a>
+                    </td>
+                }
+
+                <td>@item.dDonGia</td>
+            </tr>
+        }
+        <thead>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="@Url.Action("GioHang", "GioHang")" class="btn btn-primary">
+                        Mua hàng
+                    </a>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+    </table>
+}
