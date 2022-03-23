@@ -14,8 +14,13 @@ namespace DemoWebBanVali.Models
         public string sHinhAnh { get; set; }
         public double dDonGia { get; set; }
         public int iSoLuong { get; set; }
-        public double dThanhTien { get; set; }
-
+        public double dThanhTien
+        {
+            get
+            {
+                return iSoLuong * dDonGia;
+            }
+        }
         public GioHang(string MaSP)
         {
             sMaSP = MaSP;
@@ -24,7 +29,6 @@ namespace DemoWebBanVali.Models
             sHinhAnh = sanPham.Anh;
             dDonGia = double.Parse(sanPham.Gia.ToString());
             iSoLuong = 1;
-            dThanhTien = dDonGia * iSoLuong;
         }
 
     }
